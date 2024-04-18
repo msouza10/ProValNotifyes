@@ -1,9 +1,8 @@
 import asyncio
-import nextcord  # Modificado de 'import discord' para 'import nextcord'
+import nextcord
 from valorant_api import get_live_scores, get_news
 from embeds import live_scores_embed, news_embed
 
-# Dicionário para armazenar o canal de notificações para cada guilda
 notification_channels = {}
 
 async def notify_live_matches(client):
@@ -39,6 +38,8 @@ async def notify_news(client):
                 elif channel:
                     await channel.send("Nenhuma nova notícia no momento.")
         await asyncio.sleep(1800)  # Atualiza a cada 30 minutos
+
+notification_channels = {}
 
 def set_notification_channel(guild_id, channel_id):
     """Define o canal de notificações para uma guilda específica."""
