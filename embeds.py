@@ -34,3 +34,13 @@ def ranking_embed(rankings, region):
             inline=False
         )
     return embed
+
+def score_update_embed(team1, team2, score1, score2):
+  embed = nextcord.Embed(title="Atualização de Placar", description="O placar da partida foi atualizado!", color=0x3498db)
+  embed.add_field(name=f"{team1} vs {team2}", value=f"Placar: {score1} - {score2}", inline=False)
+  return embed
+
+def match_winner_embed(winner):
+  """Cria um embed indicando o vencedor da partida."""
+  embed = nextcord.Embed(title="Vencedor da Partida", description=f"A equipe {winner} venceu a partida!", color=0x00ff00)
+  return embed

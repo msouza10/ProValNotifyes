@@ -1,6 +1,6 @@
 import nextcord
 from nextcord.ext import commands
-from valorant_api import get_news, get_rankings, get_stats, get_upcoming_matches, get_live_scores
+from valorant_api import get_news, get_upcoming_matches, get_live_scores
 from notifications import notify_live_matches, notify_news, set_notification_channel
 from embeds import news_embed, upcoming_matches_embed, live_scores_embed, ranking_embed
 import logging
